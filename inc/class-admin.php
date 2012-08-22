@@ -61,6 +61,14 @@ class Bea_Post_Offline_Admin{
 	public static function post_submitbox_misc_actions() {
 		global $post;
 		
+		// Get custom post types
+		$custom_post_types 	= Bea_Post_Offline_Base::getPostTypes();
+		
+		// Check if current page is CPT
+		if ( ( isset($_GET['post_type']) && !in_array( $_GET['post_type'], $custom_post_types) ) || ( isset($_GET['post']) && !in_array( $post->post_type, $custom_post_types ) ) ) {
+			return false;	
+		}
+	
 		$date = '';
 		if ( (int) $post->ID > 0 ) {
 			$now = current_time('timestamp');
@@ -90,28 +98,22 @@ class Bea_Post_Offline_Admin{
 			$stamp = __('Never expires', 'bea-po');
 			$current_timestamp = current_time('timestamp');
 		}
-		
-		// Get custom post types
-		$custom_post_types 	= Bea_Post_Offline_Base::getPostTypes();
-		
-		// Check if current page is CPT
-		if ( ( isset($_GET['post_type']) && in_array( $_GET['post_type'], $custom_post_types) ) || ( isset($_GET['post']) && in_array( $post->post_type, $custom_post_types ) ) ) {
-			?>
-			<div class="misc-pub-section curtime curtime-offline">
-				<span id="offline_timestamp"><?php printf($stamp, $date); ?></span>
-				<a href="#edit_offline_timestamp" class="edit-offline-timestamp hide-if-no-js" tabindex='4'><?php _e('Edit', 'bea-po') ?></a>
-				<div id="offline-timestampdiv" class="hide-if-js">
-					<label for="enable-offline">
-						<input type="checkbox" id="enable-offline" name="enable-offline" <?php checked($checked, true); ?> value="1" />
-						<?php _e('Enable expiration', 'bea-po'); ?>
-					</label>
-					
-					<?php echo self::touch_time( 5, $current_timestamp ); ?>
-				</div>
+		?>
+		<div class="misc-pub-section curtime curtime-offline">
+			<span id="offline_timestamp"><?php printf($stamp, $date); ?></span>
+			<a href="#edit_offline_timestamp" class="edit-offline-timestamp hide-if-no-js" tabindex='4'><?php _e('Edit', 'bea-po') ?></a>
+			<div id="offline-timestampdiv" class="hide-if-js">
+				<label for="enable-offline">
+					<input type="checkbox" id="enable-offline" name="enable-offline" <?php checked($checked, true); ?> value="1" />
+					<?php _e('Enable expiration', 'bea-po'); ?>
+				</label>
+				
+				<?php echo self::touch_time( 5, $current_timestamp ); ?>
 			</div>
-			<input type="hidden" name="enable-offline-box" value="1" />
-			<?php
-		}
+		</div>
+		<input type="hidden" name="enable-offline-box" value="1" />
+		<?php
+		return true;
 	}
 	
 	/**
@@ -177,8 +179,8 @@ class Bea_Post_Offline_Admin{
 	 */
 	public static function admin_enqueue_scripts( $hook_suffix = '' ) {
 		if ( $hook_suffix == 'post.php' || $hook_suffix == 'post-new.php' ) {
-			wp_enqueue_style  ( 'bea-post-admin', BEA_PO_URL . '/ressources/admin-post.css', array(), '1.0' );
-			wp_enqueue_script ( 'bea-post-admin', BEA_PO_URL . '/ressources/admin-post.js', array('jquery'), time(), true );
+			wp_enqueue_style  ( 'bea-post-admin', BEA_PO_URL . '/ressources/admin-post.css', array(), BEA_PO_VERSION );
+			wp_enqueue_script ( 'bea-post-admin', BEA_PO_URL . '/ressources/admin-post.js', array('jquery'), BEA_PO_VERSION, true );
 			wp_localize_script( 'bea-post-admin', 'beaPostL10n', array(
 				'since' => __('Offline since: ', 'bea-po'),
 				'schedule' => __('Offline Schedule for: ', 'bea-po'),
