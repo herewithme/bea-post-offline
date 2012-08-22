@@ -1,0 +1,12 @@
+.curtime-offline label {
+	display: block;
+	margin: 3px 0;
+}
+.curtime-offline #offline_timestamp {
+	background-image: url(date-button-offline.gif);
+}
+.curtime-offline #offline_timestamp {
+	background-repeat: no-repeat;
+	background-position: left top;
+	padding-left: 18px;
+}
