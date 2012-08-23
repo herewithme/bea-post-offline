@@ -2,7 +2,7 @@
 
 Create new post status "offline" and add WP Cron task to change post status when the expiration date has passed
 
- * Contributors: momo360modena
+ * Contributors: http://profiles.wordpress.org/momo360modena/
  * Donate link: http://www.beapi.fr/donate/
  * Tags: post, status, expiration, date, cron, wp-cron, unpublish, custom, offline
  * Requires at least: 3.4
