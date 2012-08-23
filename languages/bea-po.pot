@@ -1,0 +1,104 @@
+# Copyright (C) 2010 BEA Post Offline
+# This file is distributed under the same license as the BEA Post Offline package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BEA Post Offline 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bea-post-offline\n"
+"POT-Creation-Date: 2012-08-23 05:18:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2010-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: inc/class-base.php:22
+msgid "Once 1 minute"
+msgstr ""
+
+#: inc/class-base.php:23
+msgid "Once every 5 minutes"
+msgstr ""
+
+#: inc/class-base.php:24
+msgid "Once every 15 minutes"
+msgstr ""
+
+#: inc/class-admin.php:85
+msgid "M j, Y @ G:i"
+msgstr ""
+
+#. translators: Publish box date format, see http:php.net/date
+#: inc/class-admin.php:87
+msgid "Offline since: <b>%1$s</b>"
+msgstr ""
+
+#: inc/class-admin.php:90
+msgid "Offline Schedule for: <b>%1$s</b>"
+msgstr ""
+
+#: inc/class-admin.php:92 inc/class-admin.php:98 inc/class-admin.php:187
+msgid "Never expires"
+msgstr ""
+
+#: inc/class-admin.php:104
+msgid "Edit"
+msgstr ""
+
+#: inc/class-admin.php:108
+msgid "Enable expiration"
+msgstr ""
+
+#. translators: 1: month input, 2: day input, 3: year input, 4: hour input, 5:
+#. minute input
+#: inc/class-admin.php:158
+msgid "%1$s%2$s, %3$s @ %4$s : %5$s"
+msgstr ""
+
+#: inc/class-admin.php:170
+msgid "OK"
+msgstr ""
+
+#: inc/class-admin.php:171
+msgid "Cancel"
+msgstr ""
+
+#: inc/class-admin.php:185
+msgid "Offline since: "
+msgstr ""
+
+#: inc/class-admin.php:186
+msgid "Offline Schedule for: "
+msgstr ""
+
+#: inc/class-client.php:16
+msgid "Offline"
+msgstr ""
+
+#: inc/class-client.php:21
+msgctxt "bea-po"
+msgid "Offline <span class=\"count\">(%s)</span>"
+msgid_plural "Offline <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#. Plugin Name of the plugin/theme
+msgid "BEA Post Offline"
+msgstr ""
+
+#. #-#-#-#-#  temp.pot (BEA Post Offline 1.0.1)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  temp.pot (BEA Post Offline 1.0.1)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://www.beapi.fr"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Create new post status \"offline\" and add WP Cron task to change post "
+"status when the expiration date has passed"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Amaury Balmer"
+msgstr ""

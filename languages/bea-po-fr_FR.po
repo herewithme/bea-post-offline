@@ -1,0 +1,109 @@
+# Copyright (C) 2010 BEA Post Offline
+# This file is distributed under the same license as the BEA Post Offline package.
+msgid ""
+msgstr ""
+"Project-Id-Version: BEA Post Offline 1.0.1\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/bea-post-offline\n"
+"POT-Creation-Date: 2012-08-23 05:18:20+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2012-08-23 07:29+0100\n"
+"Last-Translator: Amaury Balmer <amaury@beapi.fr>\n"
+"Language-Team: Amaury Balmer <amaury@wordpress-fr.net>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1)\n"
+"Language: French\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: inc/class-base.php:22
+msgid "Once 1 minute"
+msgstr "Toutes les minutes"
+
+#: inc/class-base.php:23
+msgid "Once every 5 minutes"
+msgstr "Toutes les 5 minutes"
+
+#: inc/class-base.php:24
+msgid "Once every 15 minutes"
+msgstr "Toutes les 15 minutes"
+
+#: inc/class-admin.php:85
+msgid "M j, Y @ G:i"
+msgstr "j F Y \\à G \\h i \\m\\i\\n"
+
+#. translators: Publish box date format, see http:php.net/date
+#: inc/class-admin.php:87
+msgid "Offline since: <b>%1$s</b>"
+msgstr "Hors-ligne depuis: <b>%1$s</b>"
+
+#: inc/class-admin.php:90
+msgid "Offline Schedule for: <b>%1$s</b>"
+msgstr "Expiration programmée pour : <b>%1$s</b>"
+
+#: inc/class-admin.php:92 inc/class-admin.php:98 inc/class-admin.php:187
+msgid "Never expires"
+msgstr "N'expire jamais"
+
+#: inc/class-admin.php:104
+msgid "Edit"
+msgstr "Modifier"
+
+#: inc/class-admin.php:108
+msgid "Enable expiration"
+msgstr "Activer l'expiration du contenu"
+
+#. translators: 1: month input, 2: day input, 3: year input, 4: hour input, 5:
+#. minute input
+#: inc/class-admin.php:158
+msgid "%1$s%2$s, %3$s @ %4$s : %5$s"
+msgstr "%2$s %1$s %3$s à %4$s h %5$s min"
+
+#: inc/class-admin.php:170
+msgid "OK"
+msgstr "OK"
+
+#: inc/class-admin.php:171
+msgid "Cancel"
+msgstr "Annuler"
+
+#: inc/class-admin.php:185
+msgid "Offline since: "
+msgstr "Hors ligne depuis: "
+
+#: inc/class-admin.php:186
+msgid "Offline Schedule for: "
+msgstr "Expiration programmée pour :"
+
+#: inc/class-client.php:16
+msgid "Offline"
+msgstr "Hors ligne"
+
+#: inc/class-client.php:21
+msgctxt "bea-po"
+msgid "Offline <span class=\"count\">(%s)</span>"
+msgid_plural "Offline <span class=\"count\">(%s)</span>"
+msgstr[0] "Hors-ligne <span class=\"count\">(%s)</span>"
+msgstr[1] "Hors-lignes <span class=\"count\">(%s)</span>"
+
+#. Plugin Name of the plugin/theme
+msgid "BEA Post Offline"
+msgstr "BEA Post Offline"
+
+#. #-#-#-#-#  temp.pot (BEA Post Offline 1.0.1)  #-#-#-#-#
+#. Plugin URI of the plugin/theme
+#. #-#-#-#-#  temp.pot (BEA Post Offline 1.0.1)  #-#-#-#-#
+#. Author URI of the plugin/theme
+msgid "http://www.beapi.fr"
+msgstr "http://www.beapi.fr"
+
+#. Description of the plugin/theme
+msgid ""
+"Create new post status \"offline\" and add WP Cron task to change post "
+"status when the expiration date has passed"
+msgstr ""
+"Créaiton d'un nouvel état \"hors-ligne\" et ajout d'une tâche WP Cron afin "
+"de mettre à jour l'état des contenus lorsque la date d'expiration est passée"
+
+#. Author of the plugin/theme
+msgid "Amaury Balmer"
+msgstr "Amaury Balmer"
