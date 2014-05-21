@@ -3,7 +3,7 @@
 Plugin Name: BEA Post Offline
 Plugin URI: https://github.com/herewithme/bea-post-offline/
 Description: Create new post status "offline" and add WP Cron task to change post status when the expiration date has passed
-Version: 1.0.2
+Version: 1.0.3
 Author: Amaury Balmer
 Author URI: http://www.beapi.fr
 Text Domain: bea-po
@@ -29,7 +29,7 @@ along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 */
 
-define( 'BEA_PO_VERSION', '1.0.2' );
+define( 'BEA_PO_VERSION', '1.0.3' );
 define( 'BEA_PO_URL', plugins_url('', __FILE__) );
 define( 'BEA_PO_DIR', dirname(__FILE__) );
 

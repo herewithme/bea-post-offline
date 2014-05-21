@@ -1,12 +1,61 @@
 .curtime-offline label {
-	display: block;
-	margin: 3px 0;
+    display: block;
+    margin: 3px 0;
 }
+
 .curtime-offline #offline_timestamp {
-	background-image: url(date-button-offline.gif);
+    padding: 2px 0 1px 0;
+    display: inline !important;
+    height: auto !important;
+    color: #888;
 }
-.curtime-offline #offline_timestamp {
-	background-repeat: no-repeat;
-	background-position: left top;
-	padding-left: 18px;
+
+.curtime-offline #offline_timestamp:before {
+    content: '\f145';
+    top: -1px;
+    font: normal 20px/1 'dashicons';
+    speak: none;
+    display: inline-block;
+    padding: 0 2px 0 0;
+    top: 0;
+    left: -1px;
+    position: relative;
+    vertical-align: top;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: none !important;
+}
+#offline-timestampdiv {
+    padding-top: 5px;
+    line-height: 23px;
+}
+
+#offline-timestampdiv input {
+    border-width: 1px;
+    border-style: solid;
+}
+
+#offline-timestampdiv select {
+    height: 21px;
+    line-height: 14px;
+    padding: 0;
+    vertical-align: top;
+    font-size: 12px;
+}
+
+#offline-timestampdiv p {
+    margin: 8px 0 6px;
+}
+
+#offline-aa, #offline-jj, #offline-hh, #offline-mn {
+    padding: 1px;
+    font-size: 12px;
+}
+
+#offline-jj, #offline-hh, #offline-mn {
+    width: 2em;
+}
+
+#offline-aa {
+    width: 3.4em;
 }
