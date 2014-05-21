@@ -141,10 +141,10 @@ class Bea_Post_Offline_Admin{
 		$cur_aa = date ( 'Y', $time_adj );
 		$cur_hh = date ( 'H', $time_adj );
 		$cur_mn = date ( 'i', $time_adj );
-	
+
 		$month = "<select id=\"offline-mm\" name=\"offline_mm\"$tab_index_attribute>\n";
 		for ( $i = 1; $i < 13; $i = $i +1 ) {
-			$month .= "\t\t\t" . '<option value="' . zeroise($i, 2) . '"' . selected($i, (int) $mm, false) . '>' . $wp_locale->get_month_abbrev( $wp_locale->get_month( $i ) ) . "</option>\n";
+			$month .= "\t\t\t" . '<option value="' . zeroise($i, 2) . '"' . selected($i, (int) $mm, false) . '>' .zeroise( $i, 2 ).'-'.$wp_locale->get_month_abbrev( $wp_locale->get_month( $i ) ) . "</option>\n";
 		}
 		$month .= '</select>';
 		
@@ -155,12 +155,12 @@ class Bea_Post_Offline_Admin{
 	
 		$output = '<div class="offline-timestamp-wrap">';
 		/* translators: 1: month input, 2: day input, 3: year input, 4: hour input, 5: minute input */
-		$output .= sprintf(__('%1$s%2$s, %3$s @ %4$s : %5$s'), $month, $day, $year, $hour, $minute);
+		$output .= sprintf(__('%2$s%1$s, %3$s @ %4$s : %5$s'), $month, $day, $year, $hour, $minute);
 	
 		$output .= '</div><input type="hidden" id="offline-ss" name="offline_ss" value="' . $ss . '" />';
 	
 		$output .= "\n\n";
-		foreach ( array('mm', 'jj', 'aa', 'hh', 'mn') as $timeunit ) {
+		foreach ( array('jj', 'mm', 'aa', 'hh', 'mn') as $timeunit ) {
 			$output .= '<input type="hidden" id="offline-hidden_' . $timeunit . '" name="offline_hidden_' . $timeunit . '" value="' . $$timeunit . '" />' . "\n";
 			$cur_timeunit = 'cur_' . $timeunit;
 			$output .= '<input type="hidden" id="offline-'. $cur_timeunit . '" name="offline_'. $cur_timeunit . '" value="' . $$cur_timeunit . '" />' . "\n";
@@ -168,9 +168,9 @@ class Bea_Post_Offline_Admin{
 
 		$output .= '<p>';
 			$output .= '<a href="#edit_offline_timestamp" class="save-offline-timestamp hide-if-no-js button">'.__('OK', 'bea-po').'</a>';
-			$output .= '<a href="#edit_offline_timestamp" class="cancel-offline-timestamp hide-if-no-js">'.__('Cancel', 'bea-po').'</a>';
+			$output .= '<a href="#edit_offline_timestamp" class="cancel-offline-timestamp hide-if-no-js cancel-button">'.__('Cancel', 'bea-po').'</a>';
 		$output .= '</p>';
-		
+
 		return $output;
 	}
 	
