@@ -6,8 +6,8 @@ Create new post status "offline" and add WP Cron task to change post status when
  * Donate link: http://www.beapi.fr/donate/
  * Tags: post, status, expiration, date, cron, wp-cron, unpublish, custom, offline
  * Requires at least: 3.8
- * Tested up to: 3.9.1
- * Stable tag: 1.0.2
+ * Tested up to: 4.9.x
+ * Stable tag: 1.1
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,6 +29,9 @@ Write with WP_DEBUG to true.
 3. Write content and set expiration date
 
 ## Changelog
+* Version 1.1 :
+	* Check compatibility for WP > 4.9
+	* Some minor improvements in code (code standards)
 * Version 1.0.3 :
 	* Style and code for WP 3.8 >
 * Version 1.0.2 :
